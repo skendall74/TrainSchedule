@@ -1,0 +1,132 @@
+/* API Project*/
+
+/* HTML, BODY CSS, JS, JQuery*/
+
+body {
+	margin-top: 75px;
+	margin-bottom: 75px;
+	font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    background: url('../images/stadium.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/wrigley.jpg', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/wrigley.jpg', sizingMethod='scale');
+    
+}
+
+.container {
+	width: auto;
+}
+
+h1 {
+	font-family: 'Exo 2', sans-serif;
+	font-size: 40px;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+h3 {
+	font-family: 'Exo 2', sans-serif;
+	font-size: 15px;
+	color: green;
+}
+
+form {
+	color: black;
+}
+
+#buttonsView {
+	display: inline;
+}
+
+.gifs {
+    display: inline-block;
+    margin: 2px;
+}
+
+#gifsView {
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+.gif {
+	cursor: crosshair;
+}
+
+p{
+    color: black;
+    background-color: white;
+}
+
+img.squiggle {
+	top:0;
+	left:0;
+}
+
+label{
+    font-display: bold;
+}
+
+#team-form {
+	display: inline;
+}
+
+button {
+	background: #fff;
+	margin: 10px;
+	font-family: 'Exo 2', sans-serif;
+	color: black;
+}
+
+button:hover {
+	background: red;
+	color: white;
+}
+
+button:active {
+	background: green;
+	color: black;
+}
+
+textarea:focus {
+  border-bottom: 2px solid #fff;
+  -webkit-box-shadow: 0 2px 0 0 #fff;
+  -moz-box-shadow: 0 2px 0 0 #fff;
+  box-shadow: 0 2px 0 0 #fff;
+}
+
+.card-header	{
+	background-color: black;
+	color: white;
+}
+.waves-effect {
+	top: 15px;
+}
+
+/* border */
+#top,
+#bottom,
+#left,
+#right {
+	background: #fff;
+	position: fixed;
+}
+
+#left,
+#right {
+	top: 0; bottom: 0;
+	width: 15px;
+}
+	#left { left: 0; }
+	#right { right: 0; }
+
+#top,
+#bottom {
+	left: 0; right: 0;
+	height: 15px;
+}
+	#top { top: 0; }
+	#bottom { bottom: 0; }
