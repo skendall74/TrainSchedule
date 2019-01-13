@@ -6,11 +6,19 @@
 
   <meta charset="UTF-8">
   <title>Train Tracker</title>
+  <!-- CSS RESET -->
+  <link href="assets/css/reset.css" rel="stylesheet">
 
+  <!-- Allow Zooming on Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+  
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
 
   <!-- Firebase Reference -->
   <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
@@ -32,7 +40,7 @@
       <h1 class="text-center">Anytime is Train Time</h1>
       <h3 class="text-center">Choo Choo. Chee Chee.</h3>
     </div>
-
+    <div class="container-fluid sticky-fix"></div>
     <div class="row">
 
       <div class="col-md-12">
@@ -70,19 +78,19 @@
             <form>
               <div class="form-group">
                 <label for="train-name-input">Train Name</label>
-                <input class="form-control" id="train-name-input" type="text">
+                <input class="form-control" id="train-input" placeholder="Enter up to 25 letters or numbers." pattern="[a-zA-Z0-9\s]{3,25}" required >
               </div>
               <div class="form-group">
                 <label for="train-input">Destination</label>
-                <input class="form-control" id="train-input" type="text">
+                <input class="form-control" id="destination-input" placeholder="Enter up to 25 letters." pattern="[a-zA-Z\s]{3,25}" required >
               </div>
               <div class="form-group">
                 <label for="start-input">First Trian Time (HH:mm - militarytime)</label>
-                <input class="form-control" id="start-input" type="text">
+                <input class="form-control" id="time-input" placeholder="Enter military time, example 14:30." pattern="[0-9:]{5}" required >
               </div>
               <div class="form-group">
                 <label for="rate-input">Frequency (min)</label>
-                <input class="form-control" id="rate-input" type="text">
+                <input class="form-control" id="frequency-input" placeholder="Enter 2 digit for minutes." pattern="[0-9]{2}" required >
               </div>
               <button class="btn btn-primary float-right" id="add-train-btn">Submit</button>
             </form>
