@@ -19,13 +19,13 @@ $("#add-train-btn").on("click", function (event) {
   // Grabs user input
   var trainName = $("#train-input").val().trim();
   var trainRole = $("#destination-input").val().trim();
-  var trainStart = moment($("#time-input").val().trim(), "MM/DD/YYYY").format("X");
+  var trainStart = $("#time-input").val().trim();
   var trainRate = $("#frequency-input").val().trim();
 
   // Creates local "temporary" object for holding train data
   var newTrain = {
     name: trainName,
-    train: trainRole,
+    role: trainRole,
     start: trainStart,
     rate: trainRate
   };
@@ -42,10 +42,10 @@ $("#add-train-btn").on("click", function (event) {
   alert("Train successfully added");
 
   // Clears all of the text-boxes
-  $("#train-name-input").val("");
   $("#train-input").val("");
-  $("#start-input").val("");
-  $("#rate-input").val("");
+  $("#destination-input").val("");
+  $("#time-input").val("");
+  $("#frequency-input").val("");
 });
 
 // 
@@ -69,7 +69,7 @@ database.ref().on("child_added", function (childSnapshot) {
   console.log(trainStartPretty);
 
   // Current Time
-  var currentTime = moment();
+  var currentTime = new moment().format("HH:mm");
   console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
 
   // Difference between the times

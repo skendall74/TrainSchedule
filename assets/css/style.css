@@ -9,13 +9,13 @@
   
   h1{
 	  font-family: 'Anton', sans-serif;
-	  font-size: 8vw;
+	  font-size: 6vw;
 	  text-align: left;
 	  margin: 0px;
 	  padding-left: 20px;
 	  color: #FFF; /* white */
   }
-  h3{
+  h2{
 	  font-family: 'Anton', sans-serif;
 	  text-align: left;
 	  margin: 0px;
@@ -40,7 +40,7 @@
 	  padding-top: 20px;
 	  padding-left: 10px;
 	  height: 200px;
-	  background-image: url("../images/train_lights.jpg");
+	  background-image: url("./assets/images/steampunk.jpg");
   }
   
   /*** 5.0 PANELS ***/
@@ -53,7 +53,7 @@
 	  padding-bottom: 85px;
   }
   footer{
-	background-color: rgba(8,8,8,0.5);
+	background-color: #FDAB00;
 	height: 85px;
 	padding-top: 10px;
 	padding-left: 20px;
