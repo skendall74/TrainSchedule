@@ -38,7 +38,9 @@
     <!-- Jumbotron -->
     <div class="jumbotron" style="background-color: black; color: white">
       <h1 class="text-center">Check if your train is on time</h1>
-      <h3 class="text-center">Choo Choo. Chee Chee.</h3>
+     
+
+        <div id="clock"></div>
     </div>
     <div class="container-fluid sticky-fix"></div>
     <div class="row">
@@ -73,7 +75,6 @@
         <div class="card mb-4">
           <div class="card-header">Add Train</div>
           <div class="card-body">
-
             <!-- Entry Form -->
             <form>
               <div class="form-group">
@@ -104,7 +105,24 @@
   <!-- JavaScript -->
   <script src="assets/timesheetLogic.js"></script>
   <script src="assets/moment.js"></script>
-
+  <body onload="startTime()">
+  <script>
+        function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('clock').innerHTML =
+          h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+  </script>
 </body>
 
 </html>

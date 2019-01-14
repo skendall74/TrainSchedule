@@ -19,7 +19,7 @@ $("#add-train-btn").on("click", function (event) {
   // Grabs user input
   var trainName = $("#train-input").val().trim();
   var trainRole = $("#destination-input").val().trim();
-  var trainStart = $("#time-input").val().trim();
+  var trainStart = moment($("#time-input").val().trim(), "HH:mm").format("X");
   var trainRate = $("#frequency-input").val().trim();
 
   // Creates local "temporary" object for holding train data
@@ -101,5 +101,21 @@ database.ref().on("child_added", function (childSnapshot) {
 
   // Append the new row to the table
   $("#train-table > tbody").append(newRow);
+  
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+  }
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
 
 });
