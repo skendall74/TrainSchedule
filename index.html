@@ -11,12 +11,12 @@
 
   <!-- Allow Zooming on Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
-  
+
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
+
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
 
@@ -38,9 +38,7 @@
     <!-- Jumbotron -->
     <div class="jumbotron" style="background-color: black; color: white">
       <h1 class="text-center">Check if your train is on time</h1>
-     
-
-        <div id="clock"></div>
+      <div id="clock"></div>
     </div>
     <div class="container-fluid sticky-fix"></div>
     <div class="row">
@@ -79,19 +77,23 @@
             <form>
               <div class="form-group">
                 <label for="train-name-input">Train Name</label>
-                <input class="form-control" id="train-input" placeholder="Enter up to 25 letters or numbers." pattern="[a-zA-Z0-9\s]{3,25}" required >
+                <input class="form-control" id="train-input" placeholder="Enter up to 25 letters or numbers." pattern="[a-zA-Z0-9\s]{3,25}"
+                  required>
               </div>
               <div class="form-group">
                 <label for="train-input">Destination</label>
-                <input class="form-control" id="destination-input" placeholder="Enter up to 25 letters." pattern="[a-zA-Z\s]{3,25}" required >
+                <input class="form-control" id="destination-input" placeholder="Enter up to 25 letters." pattern="[a-zA-Z\s]{3,25}"
+                  required>
               </div>
               <div class="form-group">
                 <label for="start-input">First Trian Time (HH:mm - militarytime)</label>
-                <input class="form-control" id="time-input" placeholder="Enter military time, example 14:30." pattern="[0-9:]{5}" required >
+                <input class="form-control" id="time-input" placeholder="Enter military time, example 14:30." pattern="[0-9:]{5}"
+                  required>
               </div>
               <div class="form-group">
                 <label for="rate-input">Frequency (min)</label>
-                <input class="form-control" id="frequency-input" placeholder="Enter 2 digit for minutes." pattern="[0-9]{2}" required >
+                <input class="form-control" id="frequency-input" placeholder="Enter 2 digit for minutes." pattern="[0-9]{2}"
+                  required>
               </div>
               <button class="btn btn-primary float-right" id="add-train-btn">Submit</button>
             </form>
@@ -105,24 +107,28 @@
   <!-- JavaScript -->
   <script src="assets/timesheetLogic.js"></script>
   <script src="assets/moment.js"></script>
+
   <body onload="startTime()">
-  <script>
-        function startTime() {
-          var today = new Date();
-          var h = today.getHours();
-          var m = today.getMinutes();
-          var s = today.getSeconds();
-          m = checkTime(m);
-          s = checkTime(s);
-          document.getElementById('clock').innerHTML =
+    <script>
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerHTML =
           h + ":" + m + ":" + s;
-          var t = setTimeout(startTime, 500);
-        }
-        function checkTime(i) {
-          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-          return i;
-        }
-  </script>
-</body>
+        var t = setTimeout(startTime, 500);
+      }
+
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i
+        }; // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
+  </body>
 
 </html>

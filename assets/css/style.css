@@ -1,80 +1,56 @@
-/*** BOX SIZING ***/
 * {
 	box-sizing: border-box;
-  }
-  /* Keep border and padding inside the box measurement */
-  
-  /*** TEXT & FONTS ***/
-  @import url('https://fonts.googleapis.com/css?family=Anton');
-  
-  h1{
-	  font-family: 'Anton', sans-serif;
-	  font-size: 6vw;
-	  text-align: left;
-	  margin: 0px;
-	  padding-left: 20px;
-	  color: #FFF; /* white */
-  }
+}
 
-  #clock {
-	  font-family: 'Anton', sans-serif;
-	  text-align: left;
-	  margin: 0px;
-	  padding-left: 20px;
-	  color: #FFF; /* white */
-	  text-align: center;
-	  font-size: 4vw;
-	  font-weight: bold;
-  }
-  h4{
-	color: #FFF; /* white */
-  }	
-  
-  /*** PAGE & TOP CONSTRUCTION ***/
-  html, body {
-	height: 100%;
-  }
-  body{
-	  background-color: #282828; /* Graphite */
-  }
-  .page-header{
-	  margin-top: 0px;
-	  margin-bottom: 30px;
-	  border: 0px;
-	  padding-top: 20px;
-	  padding-left: 10px;
-	  height: 200px;
-	  background-image: url("./assets/images/steampunk.jpg");
-  }
-  
-  /*** 5.0 PANELS ***/
-  thead{
-	  font-weight: bold;
-  }
-  
-  /*** 7.0 FOOTER ***/
-  .sticky-fix{
-	  padding-bottom: 85px;
-  }
-  footer{
-	background-color: #FDAB00;
-	height: 85px;
-	padding-top: 10px;
+h1 {
+	font-family: 'Anton', sans-serif;
+	font-size: 6vw;
+	text-align: left;
+	margin: 0px;
 	padding-left: 20px;
-  }
-  .github{
-	  text-align: left;
-	  float: left;
-	  width: 25%;
-	  position: relative;
-	   top: 50%;
-	  transform: translateY(-50%);
-  }
-  .html5{
-	  text-align: right;
-	  float: right;
-	  width: 25%;
-	  position: relative;
-	   top: 50%;
-	  transform: translateY(-50%);
-  }
+	color: #FFF;
+	/* white */
+}
+
+#clock {
+	font-family: 'Anton', sans-serif;
+	text-align: left;
+	margin: 0px;
+	padding-left: 20px;
+	color: #FFF;
+	/* white */
+	text-align: center;
+	font-size: 4vw;
+	font-weight: bold;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: #282828;
+	/* Graphite */
+}
+
+thead {
+	font-weight: bold;
+}
+
+.card-header {
+	background-color: blanchedalmond;
+	color: black;
+	font-weight: bolder;
+}
+
+#add-train-btn	{
+	background-color: blanchedalmond;
+	border:  blanchedalmond;
+	color:  black;
+}
+
+#add-train-btn:hover	{
+	background-color: black;
+	color: blanchedalmond;
+}
