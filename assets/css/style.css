@@ -42,15 +42,31 @@ thead {
 	background-color: blanchedalmond;
 	color: black;
 	font-weight: bolder;
+	display: flex;
 }
 
-#add-train-btn	{
+#add-train-btn {
 	background-color: blanchedalmond;
-	border:  blanchedalmond;
-	color:  black;
+	border: blanchedalmond;
+	color: black;
 }
 
-#add-train-btn:hover	{
+#add-train-btn:hover {
 	background-color: black;
 	color: blanchedalmond;
+}
+
+@media only screen and (max-width: 462px) {
+
+
+
+	#train-table {
+		font-size: 10px;
+		font-weight: normal;
+		border: none;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
 }
